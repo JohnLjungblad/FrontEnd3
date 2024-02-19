@@ -6,3 +6,44 @@ body{
 li{
     list-style:none;
 }
+.input-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-div{
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    height: 3vh;
+    border: 1px solid black;
+    margin-top: 2px;
+}
+.list-div:hover .x-buttons{
+    visibility: visible;
+}
+
+
+.x-buttons{
+    position: absolute;
+    right: 0%;
+    border: none;
+    background: none;
+    visibility: hidden;
+}
+.x-buttons:hover{
+    transform: scale(0.9);
+}
+.checkboxes{
+    position: absolute;
+    left: 0%;
+}
+
+.completed{
+    color: grey;
+    text-decoration: line-through;
+}
+
+.labels{
+    
+}

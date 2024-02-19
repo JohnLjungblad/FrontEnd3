@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
+
 <body>
-        <h1>ToDo</h1>
+    <h1>ToDo</h1>
 
     <div class="container">
-        <input type="text" class="main-input" placeholder="What needs to be done?">
+        <div class="input-div">
+            <button class="check-all" style="display: none;">🔽</button>
+            <input type="text" class="main-input" placeholder="What needs to be done?">
+        </div>
         <ul class="main-list">
         </ul>
 
@@ -23,7 +28,8 @@
             <button type="button" id="completed-button">Completed</button>
             <button type="button" id="clear-button">Clear completed</button>
         </div>
-    </div> 
+    </div>
 
 </body>
+
 </html>
