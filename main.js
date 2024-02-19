@@ -57,11 +57,22 @@ function createList(labelText) {
 
         itemsArray = itemsArray.filter(item => item.listItem !== listItem);
 
-        if(!checkItem.checked){
+        if (!checkItem.checked) {
             counterChange(0);
         }
         filters();
     }
+
+    divItem.addEventListener('dblclick', function () {
+        // Make the label content editable
+        labelItem.contentEditable = true;
+        labelItem.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+
+                labelItem.contentEditable = false;
+            }
+        })
+    });
 
     checkItem.addEventListener('change', function () {
         if (checkItem.checked) {
@@ -155,7 +166,7 @@ checkAllButton.onclick = function () {
 
 //Function for looping through itemlist and checking if checked or not
 
-function filters() {
+function filters() { //Dont check with counter maybe check with itemsList instead!!<<<<<<<
     if (counter > 0) {
         filterBox.style.display = 'block';
         checkAllButton.style.display = 'block';
