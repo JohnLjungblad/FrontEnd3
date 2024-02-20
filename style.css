@@ -2,6 +2,7 @@ body{
     margin:0;
     padding:0;
     text-align: center;
+    user-select: none;
 }
 li{
     list-style:none;
@@ -15,7 +16,7 @@ li{
     position: relative;
     display: inline-block;
     width: 30%;
-    height: 3vh;
+    min-height: 3vh;
     border: 1px solid black;
     margin-top: 2px;
 }
@@ -27,6 +28,7 @@ li{
 .x-buttons{
     position: absolute;
     right: 0%;
+    bottom: 30%;
     border: none;
     background: none;
     visibility: hidden;
@@ -45,5 +47,7 @@ li{
 }
 
 .labels{
-    
+    word-break: break-all;
+    padding: 0 20px;
+    margin:0;
 }
