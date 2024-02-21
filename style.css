@@ -4,6 +4,10 @@ body{
     text-align: center;
     user-select: none;
 }
+p{
+    margin:0;
+    padding:0;
+}
 li{
     list-style:none;
 }
@@ -15,20 +19,36 @@ li{
 .list-div{
     position: relative;
     display: inline-block;
-    width: 30%;
-    min-height: 3vh;
-    border: 1px solid black;
+    width: 600px;
+    min-height: 4vh;
+    border: 1px solid rgb(225, 225, 225);
     margin-top: 2px;
 }
 .list-div:hover .x-buttons{
     visibility: visible;
 }
-
+.filter-box{
+    margin:auto;
+    width: 600px;
+    border-left: 1px solid rgb(225, 225, 225);
+    border-right: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+.filter-buttons{
+    background: none;
+    border:none;
+}
+.filter-buttons:hover{
+    border:1px solid red;
+}
+.filter-buttons.active{
+    border:1px solid red;
+}
 
 .x-buttons{
     position: absolute;
     right: 0%;
-    bottom: 30%;
+    bottom: 5%;
     border: none;
     background: none;
     visibility: hidden;
@@ -39,6 +59,8 @@ li{
 .checkboxes{
     position: absolute;
     left: 0%;
+    height: 18px;
+    width: 18px;
 }
 
 .completed{

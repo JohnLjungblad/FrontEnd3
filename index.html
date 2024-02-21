@@ -10,25 +10,29 @@
 </head>
 
 <body>
-    <h1>ToDo</h1>
-
-    <div class="container">
-        <div class="input-div">
-            <button class="check-all" style="display: none;">🔽</button>
-            <input type="text" class="main-input" placeholder="What needs to be done?">
-        </div>
-        <ul class="main-list">
-        </ul>
-
-        <!--Filters-->
-        <div class="filter-box" style="display: none">
-            <p><span class="counter">1</span> item left</p>
-            <button type="button" id="all-button">All</button>
-            <button type="button" id="active-button">Active</button>
-            <button type="button" id="completed-button">Completed</button>
-            <button type="button" id="clear-button">Clear completed</button>
-        </div>
-    </div>
+    <section>
+        <header>
+            <h1>ToDo</h1>
+            <div class="input-div">
+                <button class="check-all" style="display: none;">🔽</button>
+                <input type="text" class="main-input" placeholder="What needs to be done?">
+            </div>
+        </header>
+        <main>
+            <ul class="main-list">
+            </ul>
+        </main>
+        <footer>
+            <!--Filters-->
+            <div class="filter-box" style="display: none;">
+                <span class="counter">1</span><span> item left</span>
+                <button class="filter-buttons active" type="button" id="all-button">All</button>
+                <button class="filter-buttons" type="button" id="active-button">Active</button>
+                <button class="filter-buttons" type="button" id="completed-button">Completed</button>
+                <button class="filter-buttons" type="button" id="clear-button">Clear completed</button>
+            </div>
+        </footer>
+    </section>
 
 </body>
 
