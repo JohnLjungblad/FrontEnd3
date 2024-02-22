@@ -5,6 +5,7 @@ body{
     display: flex;
     justify-content: center;
     width: 100vw;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 *:focus {
@@ -19,18 +20,11 @@ body{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-.input-div{
-    width: 100%;
-    min-height: 40px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+h1{
+    font-size: 80px;
+    font-weight: 200;
+    color: #b83f45;
     text-align: center;
-}
-
-.input-div h1{
-    font-size: 4em;
-    color: red;
 }
 
 .flex-box {
@@ -51,11 +45,17 @@ body{
 .main-input :focus {
     outline: none;
 }
+.main-input::placeholder{
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.4em;
+}
 
 .check-all {
     display: block;
     position: absolute;
-    top: 200px;
+    top: 240px;
     margin-left: 10px;
     height: 40px;
     width: 40px;
@@ -146,4 +146,5 @@ body{
 .counter-box {
     width: 100px;
     margin-left: 20px;
+    
 }
