@@ -10,26 +10,30 @@
 </head>
 
 <body>
-    <section>
-        <header>
-            <h1>ToDo</h1>
-            <div class="input-div">
-                <button class="check-all" style="display: none;">🔽</button>
-                <input type="text" class="main-input" placeholder="What needs to be done?">
-            </div>
+    <section class="section">
+        <header class="input-div">          
+                <h1>todos</h1>               
         </header>
-        <main>
+        <main class="main">
+            <div class="flex-box">                    
+                <input type="text" class="main-input" placeholder="What needs to be done?">
+            </div> 
+            <button class="check-all" style="display: none;">🔽</button>
             <ul class="main-list">
             </ul>
         </main>
-        <footer>
-            <!--Filters-->
+        <footer class="footer">
             <div class="filter-box" style="display: none;">
-                <span class="counter">1</span><span> item left</span>
-                <button class="filter-buttons active" type="button" id="all-button">All</button>
-                <button class="filter-buttons" type="button" id="active-button">Active</button>
-                <button class="filter-buttons" type="button" id="completed-button">Completed</button>
-                <button class="filter-buttons" type="button" id="clear-button">Clear completed</button>
+                <p class="counter-box">
+                    <span class="counter">1</span><span> item left</span>
+                </p>
+                <div class="filter-buttons-box">
+                    <button class="filter-buttons active" type="button" id="all-button">All</button>
+                    <button class="filter-buttons" type="button" id="active-button">Active</button>
+                    <button class="filter-buttons" type="button" id="completed-button">Completed</button>
+                    <button class="filter-buttons" type="button" id="clear-button">Clear completed</button>
+                </div>
+               
             </div>
         </footer>
     </section>
