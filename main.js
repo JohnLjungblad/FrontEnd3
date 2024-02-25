@@ -57,13 +57,13 @@ function createList(labelText) {
     divItem.addEventListener('dblclick', function () {
         labelItem.contentEditable = true;
         labelItem.focus();
-    
+
         labelItem.addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
                 labelItem.contentEditable = false;
             }
         });
-    
+
         // Handle blur event to check for empty content when focus is lost
         labelItem.addEventListener('blur', function () {
             if (labelItem.textContent.trim().length === 0) {
@@ -72,7 +72,7 @@ function createList(labelText) {
             labelItem.contentEditable = false;
         });
     });
-    
+
 
     checkItem.addEventListener('change', function () {
         if (checkItem.checked) {
@@ -83,7 +83,7 @@ function createList(labelText) {
             labelItem.classList.remove('completed');
         }
     });
-    
+
     itemsArray.push({ listItem, checkItem, labelItem });
 }
 
@@ -163,7 +163,7 @@ checkAllButton.onclick = function () {
 
 //Function for looping through itemlist and checking if checked or not
 
-function filters() { 
+function filters() {
     if (itemsArray.length > 0) {
         filterBox.style.display = 'block';
         checkAllButton.style.display = 'block';
@@ -173,31 +173,31 @@ function filters() {
         checkAllButton.style.display = 'none';
     }
 }
-function removeListItem(listItem, checkItem){
+function removeListItem(listItem, checkItem) {
     listItem.remove();
 
-        itemsArray = itemsArray.filter(item => item.listItem !== listItem);
+    itemsArray = itemsArray.filter(item => item.listItem !== listItem);
 
-        if (!checkItem.checked) {
-            counterChange(0);
-        }
-        filters();
+    if (!checkItem.checked) {
+        counterChange(0);
+    }
+    filters();
 }
-function borderFunction(){
-    switch(itemStatus){
-        case 'all':{
+function borderFunction() {
+    switch (itemStatus) {
+        case 'all': {
             allButton.classList.add('active');
             activeButton.classList.remove('active');
             completedButton.classList.remove('active');
             break;
         }
-        case 'active':{
+        case 'active': {
             allButton.classList.remove('active');
             activeButton.classList.add('active');
             completedButton.classList.remove('active');
             break;
         }
-        case 'completed':{
+        case 'completed': {
             allButton.classList.remove('active');
             activeButton.classList.remove('active');
             completedButton.classList.add('active');
